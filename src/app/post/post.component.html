@@ -1,0 +1,8 @@
+<div *ngIf="post && !editingPost">
+  <h3>{{post.title}}</h3>
+  <div [innerHtml]="post.content"></div>
+  <button class="btn btn-primary" (click)="editPost(post)">Edit post</button>
+  <button class="btn btn-default" (click)="gotoBlog()">Back</button>
+</div>
+
+<post-edit [post]="editingPost"></post-edit>

@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <nav>
     <a [routerLink]="['Home']">Home</a>
     <a [routerLink]="['About']">About</a>
@@ -8,10 +8,67 @@
   <h1 class="title">Hello from {{api.title}} !</h1>
 
   <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/angular.png">
+  <!-- <img src="/img/angular.png">
 
   <router-outlet></router-outlet>
 </main>
 <footer>
   <a [href]="url">Webpack Angular 2 Starter</a>
+</footer>-->
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="nav blog-nav">
+      <a class="nav-link" [routerLink]="['Home']">Home</a>
+      <a class="nav-link" [routerLink]="['Blog']">Blog</a>
+      <a class="nav-link" [routerLink]="['About']">About</a>
+      <a class="nav-link" [routerLink]="['Contact']">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">Znow Blog</h1>
+    <p class="lead blog-description">Code, is the real reality.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>
+          Developer
+        </p>
+      </div>
+      <div class="sidebar-module">
+        <h4>Archives</h4>
+        <my-archive></my-archive>
+      </div>
+      <div class="sidebar-module">
+        <h4>Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="https://github.com/Znow">GitHub</a></li>
+          <li><a href="https://twitter.com/daniel_wg">Twitter</a></li>
+        </ol>
+      </div>
+      <div class="sidebar-module">
+        <h4>Login</h4>
+        <my-login></my-login>
+      </div>
+    </div><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>
+    <a href="#">Back to top</a>
+  </p>
 </footer>

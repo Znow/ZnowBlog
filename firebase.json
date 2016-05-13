@@ -1,0 +1,9 @@
+{
+  "firebase": "znow",
+  "public": "/",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

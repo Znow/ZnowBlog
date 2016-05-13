@@ -1,0 +1,23 @@
+<h2>Blog Post form</h2>
+<form (ngSubmit)="onSubmit()" #postForm="ngForm">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" placeholder="Post Title" required [(ngModel)]="model.title" ngControl="title" #title="ngForm" />
+    <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+      Title is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea rows="20" class="form-control" #content (keyup)="updateValue(content.value)" placeholder="Post Content" required [(ngModel)]="model.content" ngControl="content" #content="ngForm"></textarea>
+    <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
+      Content is required
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!postForm.form.valid">Submit post</button>
+</form>
+
+<fieldset>
+  <legend>Preview</legend>
+  <div innerHtml="{{html}}"></div>
+</fieldset>
