@@ -8,6 +8,8 @@ import '@angular/router-deprecated';
 
 // RxJS
 import 'rxjs';
-
+import 'jquery';
+import 'bootstrap';
+import 'firebase';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...

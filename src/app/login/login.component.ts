@@ -2,11 +2,11 @@ import {Component, OnInit}  from '@angular/core';
 // import {NgForm}                     from '@angular/common';
 import {Router}                     from '@angular/router-deprecated';
 import {Login}                      from './login';
-// import * as firebase                from 'firebase';
+import * as firebase                from 'firebase';
 
 @Component({
   selector: 'my-login',
-  templateUrl: './app/login/login.component.html'
+  template: require('./login.component.html')
 })
 
 export class LoginComponent implements OnInit {
