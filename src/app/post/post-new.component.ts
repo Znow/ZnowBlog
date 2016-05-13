@@ -9,12 +9,12 @@ import {MarkdownConverter}       from '../conversion/markdownConverter';
 
 
 interface IPersistence {
-    retrieve(key:string):any
-    store(key:string, value:any)
+    retrieve(key: string): any;
+    store(key: string, value: any);
 }
 
 interface IConverter {
-    convert(message:string):string
+    convert(message: string): string;
 }
 
 @Component({
@@ -28,7 +28,7 @@ export class PostNewComponent {
   initVal: string;
   model = new Post(20, '', '', '');
   submitted = false;
-  firebase = new Firebase("https://znow.firebaseio.com");
+  firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
               @Inject(MarkdownConverter) private converter: IConverter,
@@ -45,7 +45,7 @@ export class PostNewComponent {
   }
 
   onSubmit() {
-    console.log()
+    console.log();
     this.postService.addPost(this.model.title, this.model.content);
     this.submitted = true;
   }

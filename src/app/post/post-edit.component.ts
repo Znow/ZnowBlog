@@ -1,13 +1,11 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Post} from './post';
 import {RouteParams, Router} from '@angular/router-deprecated';
-import {LocalStoragePersistence } from '../storage/localStorageService';
-import {MarkdownConverter} from '../conversion/markdownConverter';
-
-
+// import {LocalStoragePersistence } from '../storage/localStorageService';
+// import {MarkdownConverter} from '../conversion/markdownConverter';
 
 @Component({
-  selector: 'post-edit',
+  selector: 'my-post-edit',
   template: `
     <div *ngIf="post">
       <h2>{{post.title}} details!</h2>
@@ -24,18 +22,18 @@ import {MarkdownConverter} from '../conversion/markdownConverter';
       <button class="btn btn-primary" (click)="save(post)">Save</button>
     </div>
   `,
-  inputs: ['post']
 })
 
 export class PostEditComponent {
-  public post: Post;
+  @Input() post: string;
+  public editPost: Post;
 
   constructor(
     private _router: Router,
-    private _routeParams: RouteParams){}
+    private _routeParams: RouteParams) {}
 
-  save(post: Post) {
-    console.log(post);
-    this._router.navigate(['Post', {id: post.id }]);
+  save(editPost: Post) {
+    console.log(editPost);
+    this._router.navigate(['Post', {id: editPost.id }]);
   }
 }

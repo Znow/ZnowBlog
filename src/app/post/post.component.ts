@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   constructor(
     private _postService: PostService,
     private _router: Router,
-    private _routeParams: RouteParams){}
+    private _routeParams: RouteParams) {}
 
   ngOnInit() {
     // let id = this._routeParams.get('id');
