@@ -11,6 +11,7 @@ import 'rxjs';
 import 'jquery/dist/jquery.js';
 //import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import 'angularfire2';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
