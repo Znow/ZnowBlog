@@ -5,7 +5,7 @@ import {Post} from '../post/post';
 import {TruncatePipe} from '../truncate';
 
 @Component({
-  templateUrl: './app/blog/blog.component.html',
+  templateUrl: require('./blog.component.html'),
   pipes: [TruncatePipe],
   directives: [ROUTER_DIRECTIVES]
 })
@@ -20,11 +20,11 @@ export class BlogComponent implements OnInit {
   }
 
   getPosts() {
-    this.postService.getPosts().then(posts => this.posts = posts);
+    //this.postService.getPosts().then(posts => this.posts = posts);
   }
 
   ngOnInit(): any {
-    this.getPosts();
+    //this.getPosts();
 
   }
 }

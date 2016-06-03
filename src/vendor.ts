@@ -8,6 +8,7 @@ import '@angular/router-deprecated';
 
 // RxJS
 import 'rxjs';
+import 'jquery'
 import 'jquery/dist/jquery.js';
 //import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
