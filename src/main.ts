@@ -5,6 +5,10 @@ import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HTTP_PROVIDERS } from '@angular/http';
 
+// core
+import { AUTH_PROVIDERS, AuthRouteHelper } from './app/auth';
+import { FIREBASE_APP_PROVIDERS } from './app/firebase';
+
 import {AppComponent} from './app/app.component';
 
 const ENV_PROVIDERS = [];
@@ -20,6 +24,8 @@ bootstrap(AppComponent, [
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,
     ...ENV_PROVIDERS,
+    ...AUTH_PROVIDERS,
+    ...FIREBASE_APP_PROVIDERS,
     { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/ routes, remove this for HTML5 mode
   ])
   .catch(err => console.error(err));
