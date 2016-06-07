@@ -24,7 +24,7 @@ import '../style/app.scss';
   styles: [require('./app.component.scss')],
 })
 @RouteConfig([
-  {path: '/', component: HomeComponent, name: 'Home', },
+  {path: '/', component: HomeComponent, name: 'Home', useAsDefault: true },
   {path: '/blog', component: BlogComponent, name: 'Blog'},
   {path: '/about', component: AboutComponent, name: 'About'},
   {path: '/contact', component: ContactComponent, name: 'Contact'},
