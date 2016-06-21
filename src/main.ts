@@ -26,6 +26,6 @@ bootstrap(AppComponent, [
     ...ENV_PROVIDERS,
     ...AUTH_PROVIDERS,
     ...FIREBASE_APP_PROVIDERS,
-    { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/ routes, remove this for HTML5 mode
+    { provide: LocationStrategy, useClass: HashLocationStrategy } // use #/  routes, remove this for HTML5 mode
   ])
   .catch(err => console.error(err));
