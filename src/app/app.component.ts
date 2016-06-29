@@ -14,8 +14,8 @@ import '../style/app.scss';
   selector: 'my-app', // <my-app></my-app>
   providers: [ApiService],
   directives: [...ROUTER_DIRECTIVES, ArchiveComponent, LoginComponent],
-  template: require('./app.component.html'),
-  styles: [require('./app.component.scss')],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
