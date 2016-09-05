@@ -6,7 +6,6 @@ import '@angular/common';
 import '@angular/http';
 import '@angular/router';
 
-// RxJS
 import 'rxjs';
 import 'jquery'
 import 'jquery/dist/jquery.js';
@@ -14,5 +13,7 @@ import 'jquery/dist/jquery.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'angularfire2';
+import '@angularclass/hmr';
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
