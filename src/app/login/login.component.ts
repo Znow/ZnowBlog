@@ -1,11 +1,11 @@
 import {Component, OnInit}  from '@angular/core';
 // import {NgForm}                     from '@angular/common';
-import {Router}                     from '@angular/router-deprecated';
+import {Router}                     from '@angular/router';
 import {Login}                      from './login';
 
 @Component({
   selector: 'my-login',
-  template: require('./login.component.html')
+  templateUrl: './login.component.html'
 })
 
 export class LoginComponent implements OnInit {
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentUser = localStorage.getItem('currentUser');
+    this.currentUser = localStorage.getItem('currentUser') == "true" ? true : false;
   }
 
   onSubmit() {

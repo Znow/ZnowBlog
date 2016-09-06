@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  template: require('./archive.component.html'),
+  template: './archive.component.html',
   selector: 'my-archive'
 })
 

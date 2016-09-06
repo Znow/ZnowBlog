@@ -5,7 +5,7 @@ import {PostService}             from './post.service';
 import {Post}                    from './post';
 import {LocalStoragePersistence} from '../storage/localStorageService';
 import {MarkdownConverter}       from '../conversion/markdownConverter';
-// import * as firebase             from 'firebase';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 
 interface IPersistence {
@@ -18,7 +18,7 @@ interface IConverter {
 }
 
 @Component({
-  templateUrl: 'app/post/post-form.component.html',
+  templateUrl: './post-form.component.html',
   //bindings: [MarkdownConverter, LocalStoragePersistence]
 })
 

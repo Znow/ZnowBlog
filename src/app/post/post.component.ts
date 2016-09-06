@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from './post';
 import {PostService} from './post.service';
-import {RouteParams, Router} from '@angular/router-deprecated';
+import {Router} from '@angular/router';
 import {PostEditComponent} from './post-edit.component';
 
 @Component({
-  templateUrl: './app/post/post.component.html',
-  providers: [PostService],
-  directives: [PostEditComponent]
+  templateUrl: './post.component.html',
+  providers: [PostService]//,
+  //directives: [PostEditComponent]
 })
 
 export class PostComponent implements OnInit {
@@ -16,8 +16,7 @@ export class PostComponent implements OnInit {
 
   constructor(
     private _postService: PostService,
-    private _router: Router,
-    private _routeParams: RouteParams) {}
+    private _router: Router) {}
 
   ngOnInit() {
     // let id = this._routeParams.get('id');

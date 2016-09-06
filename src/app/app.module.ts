@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { ArchiveComponent } from './archive/archive.component';
 
+import { AuthModule } from './auth';
+import { FirebaseModule } from './firebase';
+
 import { ApiService } from './shared';
 import { routing } from './app.routing';
 
@@ -19,7 +22,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BrowserModule,
     HttpModule,
     FormsModule,
-    routing
+    routing,
+    AuthModule,
+    FirebaseModule
   ],
   declarations: [
     AppComponent,

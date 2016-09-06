@@ -1,15 +1,15 @@
-import {
-  AuthMethods,
-  defaultFirebase,
-  FIREBASE_PROVIDERS,
-  firebaseAuthConfig
-} from 'angularfire2';
+import { AngularFireModule, AuthMethods } from 'angularfire2';
 
+export const firebaseConfig = {
+  apiKey: 'HgiChLckragcAXVrJw36fBpedYCuNrkn3U9CqbhS',
+  authDomain: 'znow.firebaseapp.com',
+  databaseURL: 'https://znow.firebaseio.com',
+  storageBucket: 'znow.appspot.com'
+};
 
-export const FIREBASE_APP_PROVIDERS: any[] = [
-  FIREBASE_PROVIDERS,
-  defaultFirebase('https://znow.firebaseio.com'),
-  firebaseAuthConfig({
-    method: AuthMethods.Popup
-  })
-];
+const firebaseAuthConfig = {
+  method: AuthMethods.Popup,
+  remember: 'default'
+};
+
+export const FirebaseModule = AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig);
