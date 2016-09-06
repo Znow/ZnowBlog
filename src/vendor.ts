@@ -7,7 +7,7 @@ import '@angular/http';
 import '@angular/router';
 
 import 'rxjs';
-import 'jquery'
+//import 'jquery'
 import 'jquery/dist/jquery.js';
 //import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
