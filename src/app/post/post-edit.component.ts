@@ -1,6 +1,6 @@
-import {Component, Input} from '@angular/core';
-import {Post} from './post';
-import {RouteParams, Router} from '@angular/router-deprecated';
+import { Component, Input } from '@angular/core';
+import { Post } from './post';
+import { Router } from '@angular/router';
 // import {LocalStoragePersistence } from '../storage/localStorageService';
 // import {MarkdownConverter} from '../conversion/markdownConverter';
 
@@ -28,12 +28,10 @@ export class PostEditComponent {
   @Input() post: string;
   public editPost: Post;
 
-  constructor(
-    private _router: Router,
-    private _routeParams: RouteParams) {}
+  constructor(private router: Router) {}
 
   save(editPost: Post) {
     console.log(editPost);
-    this._router.navigate(['Post', {id: editPost.id }]);
+    this.router.navigate(['Post', {id: editPost.id }]);
   }
 }

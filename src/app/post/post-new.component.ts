@@ -1,5 +1,5 @@
 import {Component, Inject}       from '@angular/core';
-import {Router}     from '@angular/router-deprecated';
+import {Router}     from '@angular/router';
 // import {NgForm}                  from '@angular/common';
 import {PostService}             from './post.service';
 import {Post}                    from './post';
@@ -19,7 +19,7 @@ interface IConverter {
 
 @Component({
   templateUrl: 'app/post/post-form.component.html',
-  bindings: [MarkdownConverter, LocalStoragePersistence]
+  //bindings: [MarkdownConverter, LocalStoragePersistence]
 })
 
 export class PostNewComponent {
@@ -28,12 +28,12 @@ export class PostNewComponent {
   initVal: string;
   model = new Post(20, '', '', '');
   submitted = false;
-  firebase = new Firebase('https://znow.firebaseio.com');
+  //firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
               @Inject(MarkdownConverter) private converter: IConverter,
               @Inject(LocalStoragePersistence) private storage: IPersistence,
-              private _router: Router) {
+              private router: Router) {
 
     this.html = '';
     this.storageKey = 'markdown-app';
