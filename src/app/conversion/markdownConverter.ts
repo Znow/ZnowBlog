@@ -1,5 +1,5 @@
 // TODO: Find a way to do this properly
-import * as marked from 'marked';
+import marked from 'marked';
 import { Injectable } from '@angular/core';
 
 @Injectable()
