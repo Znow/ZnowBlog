@@ -1,8 +1,3 @@
-@import
-"~minx/src/settings",
-"~minx/src/functions",
-"~minx/src/mixins";
-
 //===================================================================
 //  SIGN-IN
 //===================================================================
@@ -20,7 +15,6 @@
 }
 
 .sign-in__button {
-  @include button-base;
   margin-bottom: 10px;
   outline: none;
   border: 1px solid #555;

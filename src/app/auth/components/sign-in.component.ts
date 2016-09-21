@@ -4,9 +4,6 @@ import { AuthService } from '../services/auth-service';
 
 
 @Component({
-  styles: [
-    require('./sign-in.scss')
-  ],
   template: `
     <div class="g-row sign-in">
       <div class="g-col">
@@ -16,7 +13,8 @@ import { AuthService } from '../services/auth-service';
         <button class="sign-in__button" (click)="signInWithTwitter()" type="button">Twitter</button>
       </div>
     </div>
-  `
+  `,
+  styleUrls: ['./sign-in.component.scss']
 })
 
 export class SignInComponent {
