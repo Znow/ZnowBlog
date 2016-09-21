@@ -165,6 +165,13 @@ module.exports = function makeWebpackConfig() {
       'process.env': {
         ENV: JSON.stringify(ENV)
       }
+    }),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jquery: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery",
+        "window.Tether": 'tether'
     })
   ];
 
