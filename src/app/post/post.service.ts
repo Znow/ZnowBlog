@@ -15,8 +15,8 @@ export class PostService {
 
      POSTS.push(post);*/
 
-    //let posts = this.firebase.child('posts');
-    /*posts.push(new Post(1, title, content, Date.now().toString()), (error: Error) => {
+    // let posts = this.firebase.child('posts');
+    /* posts.push(new Post(1, title, content, Date.now().toString()), (error: Error) => {
       if (error) {
         console.error('ERROR @ createPost :', error);
       }
@@ -25,8 +25,8 @@ export class PostService {
   }
 
   getPosts() {
-    let POSTS: Post[] = [];
-    /*this.firebase.on('value', (snapshot) => {
+    //let POSTS: Post[] = [];
+    /* this.firebase.on('value', (snapshot) => {
       snapshot.forEach( (childSnapshot) => {
         let child = childSnapshot.val();
         let date = new Date(child.created_at * 1000);
@@ -37,7 +37,7 @@ export class PostService {
     });*/
     // return this.firebase.child('posts');
 
-    //return Promise.resolve(POSTS);
+    // return Promise.resolve(POSTS);
     // return POSTS;
   }
 

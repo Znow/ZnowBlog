@@ -5,7 +5,7 @@ import {PostService}             from './post.service';
 import {Post}                    from './post';
 import {LocalStoragePersistence} from '../storage/localStorageService';
 import {MarkdownConverter}       from '../conversion/markdownConverter';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+// import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 
 interface IPersistence {
@@ -19,7 +19,7 @@ interface IConverter {
 
 @Component({
   templateUrl: './post-form.component.html',
-  //bindings: [MarkdownConverter, LocalStoragePersistence]
+  // bindings: [MarkdownConverter, LocalStoragePersistence]
 })
 
 export class PostNewComponent {
@@ -28,7 +28,7 @@ export class PostNewComponent {
   initVal: string;
   model = new Post(20, '', '', '');
   submitted = false;
-  //firebase = new Firebase('https://znow.firebaseio.com');
+  // firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
               @Inject(MarkdownConverter) private converter: IConverter,

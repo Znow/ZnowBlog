@@ -6,8 +6,8 @@ import {PostEditComponent} from './post-edit.component';
 
 @Component({
   templateUrl: './post.component.html',
-  providers: [PostService]//,
-  //directives: [PostEditComponent]
+  providers: [PostService]// ,
+  // directives: [PostEditComponent]
 })
 
 export class PostComponent implements OnInit {
