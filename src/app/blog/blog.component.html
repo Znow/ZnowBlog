@@ -15,7 +15,7 @@
   <p>
     {{post.content | truncate : 20 : '...' }}
     <br/>
-    <a [routerLink]="['Post', {id: post.id }]">Read more</a>
+    <a [routerLink]="['post', {id: post.id }]">Read more</a>
   </p>
 
   <!--<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>

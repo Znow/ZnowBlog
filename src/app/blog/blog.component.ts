@@ -3,8 +3,8 @@ import {PostService} from '../post/post.service';
 import {Post} from '../post/post';
 
 @Component({
-  templateUrl: './blog.component.html'// ,
-  // pipes: [TruncatePipe]
+  templateUrl: './blog.component.html',
+  providers: [PostService]
 })
 
 export class BlogComponent implements OnInit {

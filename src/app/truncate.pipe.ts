@@ -9,7 +9,7 @@ import {Pipe, PipeTransform} from '@angular/core';
  *   {{ "Hey, It's me Daniel" |  truncate:10:'...'}}
  *   formats to: "Hey It's m...""
 */
-
+// eslint-disable-next-line
 @Pipe({
   name: 'truncate'
 })
