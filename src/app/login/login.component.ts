@@ -1,7 +1,7 @@
 import {Component, OnInit}  from '@angular/core';
 // import {NgForm}                     from '@angular/common';
-import {Router}                     from '@angular/router';
-import {Login}                      from './login';
+import {Router} from '@angular/router';
+import {Login} from './login';
 
 @Component({
   selector: 'my-login',
@@ -18,14 +18,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentUser = localStorage.getItem('currentUser') == "true" ? true : false;
+    this.currentUser = localStorage.getItem('currentUser') === 'true' ? true : false;
   }
 
   onSubmit() {
-    let email = this.loginModel.email;
-    let password = this.loginModel.password;
+    // let email = this.loginModel.email;
+    // let password = this.loginModel.password;
 
-    /*let credentials: FirebaseCredentials = {
+    /* let credentials: FirebaseCredentials = {
       email: email,
       password: password
     };
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
   }
 
   logOut() {
-    //this.firebase.unauth();
+    // this.firebase.unauth();
     localStorage.removeItem('authToken');
     localStorage.removeItem('currentUser');
     this.currentUser = false;

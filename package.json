@@ -36,7 +36,7 @@
     "angularfire2": "^2.0.0-beta.5",
     "bootstrap": "^4.0.0-alpha.2",
     "core-js": "^2.4.1",
-    "firebase": "^3.4.0",
+    "firebase": "3.4.0",
     "jquery": "^2.2.0",
     "marked": "^0.3.6",
     "reflect-metadata": "^0.1.3",

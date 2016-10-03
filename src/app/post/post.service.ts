@@ -25,7 +25,7 @@ export class PostService {
   }
 
   getPosts() {
-    //let POSTS: Post[] = [];
+    // let POSTS: Post[] = [];
     /* this.firebase.on('value', (snapshot) => {
       snapshot.forEach( (childSnapshot) => {
         let child = childSnapshot.val();
