@@ -11,9 +11,9 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '/post/:id', component: PostComponent },
-  { path: '/post/:id/edit', component: PostEditComponent },
-  { path: '/post/new', component: PostNewComponent }
+  { path: 'post/:id', component: PostComponent },
+  { path: 'post/:id/edit', component: PostEditComponent },
+  { path: 'post/new', component: PostNewComponent }
 
 ];
 

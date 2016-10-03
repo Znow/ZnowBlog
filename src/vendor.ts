@@ -16,7 +16,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 // AngularFire2
 // import 'angularfire2';
 
-import 'marked';
+// import 'marked';
 
 
 // Other vendors for example jQuery, Lodash or Bootstrap

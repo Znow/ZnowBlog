@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PostService} from '../post/post.service';
 import {Post} from '../post/post';
-// import {TruncatePipe} from '../truncate';
 
 @Component({
   templateUrl: './blog.component.html'// ,

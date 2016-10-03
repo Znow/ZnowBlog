@@ -2,12 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {Post} from './post';
 import {PostService} from './post.service';
 import {Router} from '@angular/router';
-// import {PostEditComponent} from './post-edit.component';
 
 @Component({
   templateUrl: './post.component.html',
-  providers: [PostService]// ,
-  // directives: [PostEditComponent]
+  providers: [PostService]
 })
 
 export class PostComponent implements OnInit {
