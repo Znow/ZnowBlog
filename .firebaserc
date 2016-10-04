@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ZnowBlog"
+    "default": "ZnowBlog",
+    "production": "firebase-znow"
   }
 }
