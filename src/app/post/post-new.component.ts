@@ -3,8 +3,8 @@ import {Router}     from '@angular/router';
 // import {NgForm}                  from '@angular/common';
 import {PostService}             from './post.service';
 import {Post}                    from './post';
-import {LocalStoragePersistence} from '../storage/localStorageService';
-import {MarkdownConverter}       from '../conversion/markdownConverter';
+//import {LocalStoragePersistence} from '../storage/localStorageService';
+//import {MarkdownConverter}       from '../conversion/markdownConverter';
 // import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 
@@ -31,15 +31,15 @@ export class PostNewComponent {
   // firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
-              @Inject(MarkdownConverter) private converter: IConverter,
-              @Inject(LocalStoragePersistence) private storage: IPersistence,
+              //@Inject(MarkdownConverter) private converter: IConverter,
+              //@Inject(LocalStoragePersistence) private storage: IPersistence,
               private router: Router) {
 
     this.html = '';
     this.storageKey = 'markdown-app';
 
-    let text = this.storage.retrieve(this.storageKey);
-    this.initVal = text ? text.text : '';
+    //let text = this.storage.retrieve(this.storageKey);
+    //this.initVal = text ? text.text : '';
 
     this.updateValue(this.initVal);
   }
@@ -51,7 +51,7 @@ export class PostNewComponent {
   }
 
   public updateValue(val) {
-    this.storage.store(this.storageKey, {text: val});
-    this.html = this.converter.convert(val);
+    //this.storage.store(this.storageKey, {text: val});
+    //this.html = this.converter.convert(val);
   }
 }
