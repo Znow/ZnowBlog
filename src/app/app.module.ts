@@ -29,11 +29,13 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     HomeComponent,
     AboutComponent,
+    ArchiveComponent,
     BlogComponent,
     LoginComponent,
     PostComponent,
     PostEditComponent,
-    PostNewComponent
+    PostNewComponent,
+    TruncatePipe
   ],
   providers: [
     ApiService
