@@ -5,10 +5,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noEmitHelpers": true,
-    "types": [
-      "firebase"
-    ]
+    "noEmitHelpers": true
   },
   "compileOnSave": false,
   "buildOnSave": false,

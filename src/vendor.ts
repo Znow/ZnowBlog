@@ -8,6 +8,9 @@ import '@angular/router';
 
 import 'rxjs';
 import '@angularclass/hmr';
+
+// Other vendors for example jQuery, Lodash or Bootstrap
+// You can import js, ts, css, sass, ...
 import 'jquery/dist/jquery.js';
 import 'tether';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,7 +20,3 @@ import 'bootstrap/dist/js/bootstrap.js';
 // import 'angularfire2';
 
 // import 'marked';
-
-
-// Other vendors for example jQuery, Lodash or Bootstrap
-// You can import js, ts, css, sass, ...

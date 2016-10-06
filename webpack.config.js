@@ -204,7 +204,7 @@ module.exports = function makeWebpackConfig() {
         ]
       }
     }),
-    
+
     new webpack.ProvidePlugin({
         $: "jquery",
         jquery: "jquery",
