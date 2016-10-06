@@ -20,6 +20,11 @@ import { AuthService } from '../services/auth-service';
 export class SignInComponent {
   constructor(private auth: AuthService, private router: Router) {}
 
+  /* signInWithEmail(): void {
+    this.auth.signInWithEmail()
+      .then(() => this.postSignIn());
+  }*/
+
   signInWithGithub(): void {
     this.auth.signInWithGithub()
       .then(() => this.postSignIn());
@@ -36,6 +41,6 @@ export class SignInComponent {
   }
 
   private postSignIn(): void {
-    this.router.navigate(['/tasks']);
+    this.router.navigate(['/']);
   }
 }

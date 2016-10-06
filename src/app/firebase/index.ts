@@ -1,7 +1,7 @@
 import { AngularFireModule, AuthMethods } from 'angularfire2';
 
 export const firebaseConfig = {
-  apiKey: 'HgiChLckragcAXVrJw36fBpedYCuNrkn3U9CqbhS',
+  apiKey: 'AIzaSyDcClaxOo9R3K1pbq-0k_Xh_ZrXFSv8gbA',
   authDomain: 'znow.firebaseapp.com',
   databaseURL: 'https://znow.firebaseio.com',
   storageBucket: 'znow.appspot.com'
