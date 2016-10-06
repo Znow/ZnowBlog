@@ -12,8 +12,8 @@ export class BlogComponent implements OnInit {
   currentUser: boolean = false;
 
   constructor(public postService: PostService) {
-    //console.log(localStorage.getItem('currentUser'));
-    //this.currentUser = localStorage.getItem('currentUser') === 'true' ? true : false;
+    console.log(localStorage.getItem('currentUser'));
+    this.currentUser = localStorage.getItem('currentUser') === 'true' ? true : false;
   }
 
   getPosts() {

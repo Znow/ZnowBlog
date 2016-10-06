@@ -17,6 +17,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
 // AngularFire2
-// import 'angularfire2';
+import 'firebase';
+import 'angularfire2';
 
 // import 'marked';

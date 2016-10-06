@@ -1,14 +1,17 @@
-import {Component, OnInit}  from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 // import {NgForm}                     from '@angular/common';
 import {Router} from '@angular/router';
 import {Login} from './login';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'my-login',
   templateUrl: './login.component.html'
 })
 
 export class LoginComponent implements OnInit {
+  @Input() authenticated: boolean;
+  @Output() signOut = new EventEmitter(false);
   currentUser: boolean = false;
   submitted: boolean = false;
   loginModel = new Login('', '');
@@ -22,25 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // let email = this.loginModel.email;
-    // let password = this.loginModel.password;
-
-    /* let credentials: FirebaseCredentials = {
-      email: email,
-      password: password
-    };
-
-    this.firebase.authWithPassword(credentials, (error, authData) => {
-      if (error) {
-      }
-
-      console.log(authData);
-      localStorage.setItem('authToken', authData.token);
-      localStorage.setItem('currentUser', 'true');
-
-      this.currentUser = true;
-      this.submitted = true;
-    });*/
   }
 
   gotoNewPost() {
@@ -54,3 +38,4 @@ export class LoginComponent implements OnInit {
     this.currentUser = false;
   }
 }
+

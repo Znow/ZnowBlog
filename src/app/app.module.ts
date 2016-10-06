@@ -8,10 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ArchiveComponent } from './archive';
 import { BlogComponent } from './blog';
+import { ContactComponent } from './contact';
 import { LoginComponent } from './login';
 import { PostComponent, PostEditComponent, PostNewComponent } from './post';
 
 import { TruncatePipe } from './truncate.pipe';
+
+import { AuthModule } from './auth';
+import { FirebaseModule } from './firebase';
 
 import { ApiService } from './shared';
 import { routing } from './app.routing';
@@ -23,7 +27,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BrowserModule,
     HttpModule,
     FormsModule,
-    routing
+    routing,
+    AuthModule,
+    FirebaseModule
   ],
   declarations: [
     AppComponent,
@@ -31,6 +37,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AboutComponent,
     ArchiveComponent,
     BlogComponent,
+    ContactComponent,
     LoginComponent,
     PostComponent,
     PostEditComponent,
