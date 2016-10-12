@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  template: './archive.component.html',
+  templateUrl: './archive.component.html',
   selector: 'my-archive'
 })
 
@@ -14,5 +14,7 @@ export class ArchiveComponent {
       'Februar 2016',
       'Marts 2016'
     ];
+
+    // collect post's dates, and show archive links based on post in which months
   }
 }
