@@ -16,5 +16,15 @@ export class LoginComponent {
   currentUser: boolean = false;
   submitted: boolean = false;
   loginModel = new Login('', '');
+
+  constructor(private auth: AuthService, private router: Router) {}
+
+  onSubmit() {
+    let email = this.loginModel.email;
+    let password = this.loginModel.password;
+
+    this.auth.signInWithEmail(email, password)
+      .then(() => this.router.navigate(['/']));
+  }
 }
 

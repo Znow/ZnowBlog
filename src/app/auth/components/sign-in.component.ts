@@ -13,17 +13,13 @@ import { AuthService } from '../services/auth-service';
         <button class="sign-in__button" (click)="signInWithTwitter()" type="button">Twitter</button>
       </div>
     </div>
+    {{this.auth.authenticated}}
   `,
   styleUrls: ['./sign-in.component.scss']
 })
 
 export class SignInComponent {
   constructor(private auth: AuthService, private router: Router) {}
-
-  /* signInWithEmail(): void {
-    this.auth.signInWithEmail()
-      .then(() => this.postSignIn());
-  }*/
 
   signInWithGithub(): void {
     this.auth.signInWithGithub()
