@@ -14,7 +14,6 @@ const routes: Routes = [
   { path: 'post/:id', component: PostComponent },
   { path: 'post/:id/edit', component: PostEditComponent },
   { path: 'post/new', component: PostNewComponent }
-
 ];
 
 export const routing = RouterModule.forRoot(routes);
