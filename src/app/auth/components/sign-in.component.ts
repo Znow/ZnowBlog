@@ -4,17 +4,7 @@ import { AuthService } from '../services/auth-service';
 
 
 @Component({
-  template: `
-    <div class="g-row sign-in">
-      <div class="g-col">
-        <h1 class="sign-in__heading">Sign in</h1>
-        <button class="sign-in__button" (click)="signInWithGithub()" type="button">GitHub</button>
-        <button class="sign-in__button" (click)="signInWithGoogle()" type="button">Google</button>
-        <button class="sign-in__button" (click)="signInWithTwitter()" type="button">Twitter</button>
-      </div>
-    </div>
-    {{this.auth.authenticated}}
-  `,
+  templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
 
