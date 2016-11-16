@@ -25,8 +25,13 @@ export class AuthService {
       .catch(error => console.log('ERROR @ AuthService#signIn() :', error));
   }
 
+  signInWithCredentials(email: string, password: string, provider: number): firebase.Promise<FirebaseAuthState> {
+    return this.auth$.login({email, password},{provider})
+      .catch(error => console.log('ERROR @ AuthService#signIn() :', error));
+  }
+
   signInWithEmail(email: string, password: string): firebase.Promise<FirebaseAuthState> {
-    return this.signIn(AuthProviders.Password);
+    return this.signInWithCredentials(email, password, AuthProviders.Password);
   }
 
   signInWithGithub(): firebase.Promise<FirebaseAuthState> {
