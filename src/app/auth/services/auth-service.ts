@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AuthProviders, FirebaseAuth, FirebaseAuthState } from 'angularfire2';
+import { AuthProviders, AuthMethods, FirebaseAuth, FirebaseAuthState } from 'angularfire2';
 
 
 @Injectable()
@@ -25,13 +25,13 @@ export class AuthService {
       .catch(error => console.log('ERROR @ AuthService#signIn() :', error));
   }
 
-  signInWithCredentials(email: string, password: string, provider: number): firebase.Promise<FirebaseAuthState> {
-    return this.auth$.login({email, password},{provider})
+  signInWithCredentials(email: string, password: string, provider: number, method: number): firebase.Promise<FirebaseAuthState> {
+    return this.auth$.login({email, password},{provider, method})
       .catch(error => console.log('ERROR @ AuthService#signIn() :', error));
   }
 
   signInWithEmail(email: string, password: string): firebase.Promise<FirebaseAuthState> {
-    return this.signInWithCredentials(email, password, AuthProviders.Password);
+    return this.signInWithCredentials(email, password, AuthProviders.Password, AuthMethods.Password);
   }
 
   signInWithGithub(): firebase.Promise<FirebaseAuthState> {

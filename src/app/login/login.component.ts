@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { Router } from '@angular/router';
 import { Login } from './login';
 import { AuthService } from '../auth';
+//import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
