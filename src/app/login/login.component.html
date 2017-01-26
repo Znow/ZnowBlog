@@ -1,3 +1,5 @@
+<h4 *ngIf="!authenticated">Login</h4>
+
 <form *ngIf="!authenticated" (ngSubmit)="onSubmit()" #loginForm="ngForm">
   <div class="form-group">
     <label for="email" class="sr-only">Email</label>

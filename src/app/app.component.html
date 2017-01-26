@@ -32,8 +32,9 @@
         </ol>
       </div>
       <div class="sidebar-module">
-        <h4>Login</h4>
-        <my-login></my-login>
+        <my-login [authenticated]="auth.authenticated"></my-login>
+        <h4 *ngIf="auth.authenticated">Admin</h4>
+        <!--<my-admin></my-admin>-->
       </div>
     </div><!-- /.blog-sidebar -->
 
