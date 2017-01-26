@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog';
 import { ContactComponent } from './contact';
 import { PostComponent, PostEditComponent, PostNewComponent } from './post';
+import { SignInComponent } from './auth';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'post/:id', component: PostComponent },
   { path: 'post/:id/edit', component: PostEditComponent },
-  { path: 'post/new', component: PostNewComponent }
+  { path: 'post/new', component: PostNewComponent },
+  { path: 'signin', component: SignInComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

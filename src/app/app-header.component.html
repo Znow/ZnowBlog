@@ -1,0 +1,13 @@
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="nav blog-nav">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['']">Home</a>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['blog']">Blog</a>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['about']">About</a>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['contact']">Contact</a>
+      <a *ngIf="!authenticated" class="nav-link" [routerLink]="['signin']">Sign in</a>
+      <a *ngIf="authenticated">User</a>
+      <a *ngIf="authenticated" class="nav-link" (click)="signOut.emit()">Sign out</a>
+    </nav>
+  </div>
+</div>

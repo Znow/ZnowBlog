@@ -1,13 +1,4 @@
-<div class="blog-masthead">
-  <div class="container">
-    <nav class="nav blog-nav">
-      <a class="nav-link" routerLinkActive="active" [routerLink]="['']">Home</a>
-      <a class="nav-link" routerLinkActive="active" [routerLink]="['blog']">Blog</a>
-      <a class="nav-link" routerLinkActive="active" [routerLink]="['about']">About</a>
-      <a class="nav-link" routerLinkActive="active" [routerLink]="['contact']">Contact</a>
-    </nav>
-  </div>
-</div>
+<app-header [authenticated]="auth.authenticated" (signOut)="signOut()"></app-header>
 
 <div class="blog-header">
   <div class="container">
