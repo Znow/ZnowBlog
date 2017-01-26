@@ -45,10 +45,18 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     TruncatePipe
   ],
   providers: [
-    ApiService
+    ApiService// ,
+    // {provide: ErrorHandler, useClass: MyErrorHandler}
   ],
   bootstrap: [AppComponent]
 })
+
+/* class MyErrorHandler implements ErrorHandler {
+  handleError(error) {
+    console.log(error);
+  }
+}*/
+
 export class AppModule {
   constructor(public appRef: ApplicationRef) {}
   hmrOnInit(store) {

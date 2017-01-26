@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-// import {Observable} from 'rxjs/Rx';
-import {Post} from './post';
-// import {POSTS} from './mock-posts';
+import { Injectable } from '@angular/core';
+// import { Observable } from 'rxjs/Rx';
+import { Post } from './post';
+// import { POSTS } from './mock-posts';
 
 
 @Injectable()
@@ -10,6 +10,7 @@ export class PostService {
   posts: Post[];
 
   addPost(title: string, content: string) {
+    console.log(title, content);
     /* var getLastId = POSTS[POSTS.length - 1].id;
      var post = <Post>{ id: getLastId + 1, title: title, content: content, created_at: "February 24, 2016" }
 
@@ -42,6 +43,7 @@ export class PostService {
   }
 
   getPost(id: number | string) {
+    console.log(id);
     // return this.getPosts().then(posts => posts.filter(p => p.id === +id)[0]);
     // return POSTS.filter(p => p.id === +id)[0];
   }

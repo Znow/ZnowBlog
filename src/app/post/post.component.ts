@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Post} from './post';
-import {PostService} from './post.service';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Post } from './post';
+import { PostService } from './post.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './post.component.html',
@@ -13,7 +13,7 @@ export class PostComponent implements OnInit {
   public editingPost: Post;
 
   constructor(
-    private _postService: PostService,
+    // private _postService: PostService,
     private _router: Router) {}
 
   ngOnInit() {

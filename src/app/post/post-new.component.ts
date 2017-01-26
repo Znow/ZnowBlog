@@ -1,21 +1,21 @@
-import {Component, Inject}       from '@angular/core';
-import {Router}     from '@angular/router';
+import { Component }       from '@angular/core';
+// import {Router}     from '@angular/router';
 // import {NgForm}                  from '@angular/common';
-import {PostService}             from './post.service';
-import {Post}                    from './post';
+import { PostService }             from './post.service';
+import { Post }                    from './post';
 // import {LocalStoragePersistence} from '../storage/localStorageService';
 // import {MarkdownConverter}       from '../conversion/markdownConverter';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+// import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 
-interface IPersistence {
+/* interface IPersistence {
     retrieve(key: string): any;
     store(key: string, value: any);
 }
 
 interface IConverter {
     convert(message: string): string;
-}
+}*/
 
 @Component({
   templateUrl: './post-form.component.html',
@@ -33,7 +33,8 @@ export class PostNewComponent {
   constructor(public postService: PostService,
               // @Inject(MarkdownConverter) private converter: IConverter,
               // @Inject(LocalStoragePersistence) private storage: IPersistence,
-              private router: Router) {
+              // private router: Router
+              ) {
 
     this.html = '';
     this.storageKey = 'markdown-app';
@@ -41,7 +42,7 @@ export class PostNewComponent {
     // let text = this.storage.retrieve(this.storageKey);
     // this.initVal = text ? text.text : '';
 
-    this.updateValue(this.initVal);
+    // this.updateValue(this.initVal);
   }
 
   onSubmit() {
@@ -51,6 +52,7 @@ export class PostNewComponent {
   }
 
   public updateValue(val) {
+    console.log(val);
     // this.storage.store(this.storageKey, {text: val});
     // this.html = this.converter.convert(val);
   }

@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { Router } from '@angular/router';
 import { Login } from './login';
 import { AuthService } from '../auth';
-//import { AngularFire, FirebaseListObservable } from 'angularfire2';
+// import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -14,8 +14,8 @@ import { AuthService } from '../auth';
 export class LoginComponent {
   @Input() authenticated: boolean;
   @Output() signOut = new EventEmitter(false);
-  currentUser: boolean = false;
-  submitted: boolean = false;
+  currentUser: false;
+  submitted: false;
   loginModel = new Login('', '');
 
   constructor(private auth: AuthService, private router: Router) {}
