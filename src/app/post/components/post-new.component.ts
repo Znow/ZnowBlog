@@ -1,24 +1,23 @@
-import { Component, OnInit }       from '@angular/core';
+import { Component, OnInit, Inject }       from '@angular/core';
 // import {Router}     from '@angular/router';
 import { PostService }     from '../services/post.service';
 import { Post }            from '../post';
-// import {LocalStoragePersistence} from '../storage/localStorageService';
-// import {MarkdownConverter}       from '../conversion/markdownConverter';
-// import {AngularFire, FirebaseListObservable} from 'angularfire2';
+//import { LocalStoragePersistence } from '../../storage/localStorageService';
+import { MarkdownConverter }       from '../../conversion/markdownConverter';
 
 
 /* interface IPersistence {
     retrieve(key: string): any;
     store(key: string, value: any);
-}
+}*/
 
 interface IConverter {
     convert(message: string): string;
-}*/
+}
 
 @Component({
   templateUrl: './post-new.component.html',
-  // bindings: [MarkdownConverter, LocalStoragePersistence]
+  //bindings: [MarkdownConverter]
 })
 
 export class PostNewComponent implements OnInit {
@@ -30,8 +29,8 @@ export class PostNewComponent implements OnInit {
   // firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
-              // @Inject(MarkdownConverter) private converter: IConverter,
-              // @Inject(LocalStoragePersistence) private storage: IPersistence,
+              @Inject(MarkdownConverter) private converter: IConverter,
+              //@Inject(LocalStoragePersistence) private storage: IPersistence,
               // private router: Router
               ) {
 
