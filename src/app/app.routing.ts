@@ -4,18 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog';
 import { ContactComponent } from './contact';
-import { PostComponent, PostEditComponent, PostNewComponent } from './post';
+//import { PostComponent } from './post';
 import { SignInComponent } from './auth';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'post/:id', component: PostComponent },
-  { path: 'post/:id/edit', component: PostEditComponent },
-  { path: 'post/new', component: PostNewComponent },
-  { path: 'signin', component: SignInComponent }
+  { path: 'signin', component: SignInComponent }//,
+  //{ path: 'post/new', component: PostComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

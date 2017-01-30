@@ -27,7 +27,7 @@ export class AuthService {
 
   signInWithCredentials(email: string, password: string, provider: number, method: number): firebase.Promise<FirebaseAuthState> {
     return this.auth$.login({ email, password }, { provider, method })
-      .then(() => console.log("test"))
+      .then(() => console.log('test'))
       .catch(error => console.log('ERROR @ AuthService#signIn() :', error));
   }
 

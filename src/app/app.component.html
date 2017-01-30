@@ -1,4 +1,4 @@
-<app-header [authenticated]="auth.authenticated" (signOut)="signOut()"></app-header>
+<my-app-header [authenticated]="auth.authenticated" (signOut)="signOut()"></my-app-header>
 
 <div class="blog-header">
   <div class="container">
@@ -35,6 +35,10 @@
         <my-login [authenticated]="auth.authenticated"></my-login>
         <h4 *ngIf="auth.authenticated">Admin</h4>
         <!--<my-admin></my-admin>-->
+        <ul *ngIf="auth.authenticated" class="list-unstyled">
+          <li><a routerLink="/post/new">New post</a></li>
+        </ul>
+        
       </div>
     </div><!-- /.blog-sidebar -->
 

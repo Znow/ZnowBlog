@@ -1,4 +1,5 @@
 import { NgModule, ApplicationRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,7 @@ import { ArchiveComponent } from './archive';
 import { BlogComponent } from './blog';
 import { ContactComponent } from './contact';
 import { LoginComponent } from './login';
-import { PostComponent, PostEditComponent, PostNewComponent } from './post';
+import { PostModule } from './post';
 
 import { TruncatePipe } from './truncate.pipe';
 
@@ -30,6 +31,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     FormsModule,
     routing,
     AuthModule,
+    PostModule,
     FirebaseModule
   ],
   declarations: [
@@ -41,9 +43,6 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BlogComponent,
     ContactComponent,
     LoginComponent,
-    PostComponent,
-    PostEditComponent,
-    PostNewComponent,
     TruncatePipe
   ],
   providers: [
@@ -60,7 +59,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 }*/
 
 export class AppModule {
-  constructor(public appRef: ApplicationRef) {}
+  constructor(public appRef: ApplicationRef, router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
   hmrOnInit(store) {
     console.log('HMR store', store);
   }

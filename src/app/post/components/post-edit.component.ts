@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Post } from './post';
+import { Post } from '../post';
 import { Router } from '@angular/router';
 // import {LocalStoragePersistence } from '../storage/localStorageService';
 // import {MarkdownConverter} from '../conversion/markdownConverter';

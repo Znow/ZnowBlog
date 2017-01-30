@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from './post';
-import { PostService } from './post.service';
 import { Router } from '@angular/router';
+import { Post } from '../post';
+import { PostService } from '../services/post.service';
+
 
 @Component({
   templateUrl: './post.component.html',

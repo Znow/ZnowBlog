@@ -1,8 +1,7 @@
-import { Component }       from '@angular/core';
+import { Component, OnInit }       from '@angular/core';
 // import {Router}     from '@angular/router';
-// import {NgForm}                  from '@angular/common';
-import { PostService }             from './post.service';
-import { Post }                    from './post';
+import { PostService }     from '../services/post.service';
+import { Post }            from '../post';
 // import {LocalStoragePersistence} from '../storage/localStorageService';
 // import {MarkdownConverter}       from '../conversion/markdownConverter';
 // import {AngularFire, FirebaseListObservable} from 'angularfire2';
@@ -18,11 +17,11 @@ interface IConverter {
 }*/
 
 @Component({
-  templateUrl: './post-form.component.html',
+  templateUrl: './post-new.component.html',
   // bindings: [MarkdownConverter, LocalStoragePersistence]
 })
 
-export class PostNewComponent {
+export class PostNewComponent implements OnInit {
   private storageKey: string;
   html: string;
   initVal: string;
@@ -43,6 +42,10 @@ export class PostNewComponent {
     // this.initVal = text ? text.text : '';
 
     // this.updateValue(this.initVal);
+  }
+
+  ngOnInit() {
+    console.log('Hello Post New');
   }
 
   onSubmit() {
