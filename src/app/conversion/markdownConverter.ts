@@ -1,4 +1,4 @@
-// TODO: Find a way to do this properly
+/*// TODO: Find a way to do this properly
 import marked from 'marked';
 import { Injectable } from '@angular/core';
 
@@ -15,4 +15,4 @@ export class MarkdownConverter {
         // return marked.parse("# h");
         return this.md.parse(markdown);
     }
-}
+}*/

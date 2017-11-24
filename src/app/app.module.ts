@@ -16,8 +16,16 @@ import { PostModule } from './post';
 
 import { TruncatePipe } from './truncate.pipe';
 
-import { AuthModule } from './auth';
-import { FirebaseModule } from './firebase';
+//import { AuthModule } from './auth';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+
+import { AuthService } from './auth/services/auth.service'
+
+import { SignInComponent } from './auth/components/sign-in.component';
+
+//import { FirebaseModule } from './firebase';
 
 import { ApiService } from './shared';
 import { routing } from './app.routing';
@@ -30,9 +38,11 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     HttpModule,
     FormsModule,
     routing,
-    AuthModule,
+    //AuthModule,
     PostModule,
-    FirebaseModule
+    //FirebaseModule
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   declarations: [
     AppComponent,
@@ -43,11 +53,13 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     BlogComponent,
     ContactComponent,
     LoginComponent,
+    SignInComponent,
     TruncatePipe
   ],
   providers: [
-    ApiService// ,
+    ApiService,// ,
     // {provide: ErrorHandler, useClass: MyErrorHandler}
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

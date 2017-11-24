@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../services/auth-service';
+//import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -9,9 +9,21 @@ import { AuthService } from '../services/auth-service';
 })
 
 export class SignInComponent {
-  constructor(private auth: AuthService, private router: Router) {}
+  email: string;
+  password: string;
 
-  signInWithGithub(): void {
+  constructor(public authService: AuthService/*, private router: Router*/) {}
+
+  login() {
+    this.authService.login(this.email, this.password);
+    this.email = this.password = '';
+  }
+
+  logout() {
+    this.authService.logout();
+  }
+
+  /*signInWithGithub(): void {
     this.auth.signInWithGithub()
       .then(() => this.postSignIn());
   }
@@ -24,9 +36,9 @@ export class SignInComponent {
   signInWithTwitter(): void {
     this.auth.signInWithTwitter()
       .then(() => this.postSignIn());
-  }
+  }*/
 
-  private postSignIn(): void {
+  /*private postSignIn(): void {
     this.router.navigate(['/']);
-  }
+  }*/
 }

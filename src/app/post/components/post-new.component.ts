@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject }       from '@angular/core';
+import { Component, OnInit/*, Inject*/ }       from '@angular/core';
 // import {Router}     from '@angular/router';
 import { PostService }     from '../services/post.service';
 import { Post }            from '../post';
 //import { LocalStoragePersistence } from '../../storage/localStorageService';
-import { MarkdownConverter }       from '../../conversion/markdownConverter';
+//import { MarkdownConverter }       from '../../conversion/markdownConverter';
 
 
 /* interface IPersistence {
@@ -11,9 +11,9 @@ import { MarkdownConverter }       from '../../conversion/markdownConverter';
     store(key: string, value: any);
 }*/
 
-interface IConverter {
+/*interface IConverter {
     convert(message: string): string;
-}
+}*/
 
 @Component({
   templateUrl: './post-new.component.html',
@@ -21,7 +21,7 @@ interface IConverter {
 })
 
 export class PostNewComponent implements OnInit {
-  private storageKey: string;
+  //private storageKey: string;
   html: string;
   initVal: string;
   model = new Post(20, '', '', '');
@@ -29,13 +29,13 @@ export class PostNewComponent implements OnInit {
   // firebase = new Firebase('https://znow.firebaseio.com');
 
   constructor(public postService: PostService,
-              @Inject(MarkdownConverter) private converter: IConverter,
+              //@Inject(MarkdownConverter) private converter: IConverter,
               //@Inject(LocalStoragePersistence) private storage: IPersistence,
               // private router: Router
               ) {
 
     this.html = '';
-    this.storageKey = 'markdown-app';
+    //this.storageKey = 'markdown-app';
 
     // let text = this.storage.retrieve(this.storageKey);
     // this.initVal = text ? text.text : '';

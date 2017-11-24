@@ -5,7 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog';
 import { ContactComponent } from './contact';
 //import { PostComponent } from './post';
-import { SignInComponent } from './auth';
+import { SignInComponent } from './auth/components/sign-in.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },

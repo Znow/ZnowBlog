@@ -210,7 +210,8 @@ module.exports = function makeWebpackConfig() {
         jquery: "jquery",
         jQuery: "jquery",
         "windows.jQuery": "jquery",
-        "Tether": 'tether'
+        "Tether": 'tether',
+        'Popper': 'popper.js'
     }),
   ];
 

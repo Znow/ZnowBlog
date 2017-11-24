@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 // import {NgForm}                     from '@angular/common';
 import { Router } from '@angular/router';
 import { Login } from './login';
-import { AuthService } from '../auth';
+import { AuthService } from '../auth/services/auth.service';
 // import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
@@ -24,8 +24,7 @@ export class LoginComponent {
     let email = this.loginModel.email;
     let password = this.loginModel.password;
 
-    this.auth.signInWithEmail(email, password)
+    this.auth.login(email, password)
       .then(() => this.router.navigate(['/']));
   }
 }
-

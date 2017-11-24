@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './shared';
-import { AuthService } from './auth';
+//import { AuthService } from './auth/services/auth.service';
 
 import '../style/app.scss';
 
@@ -14,11 +14,11 @@ export class AppComponent {
   url = 'https://github.com/preboot/angular2-webpack';
   title: string;
 
-  constructor(private api: ApiService, private auth: AuthService) {
+  constructor(private api: ApiService) {
     this.title = this.api.title;
   }
 
-  signOut(): void {
+  /*signOut(): void {
     this.auth.signOut();
-  }
+  }*/
 }
